@@ -1,3 +1,8 @@
+import fb from "./icon_facebook.png"
+import tw from "./icon_twitter.png"
+import ig from "./icon_instagram.png"
+import mail from "./icon_mail.png"
+import twitch from "./icon_twitch.png"
 import "./style.css";
 const Footer = () => {
   return (
@@ -20,11 +25,27 @@ const Footer = () => {
           </a>
           <a className="nav-link">FAQ</a>
         </div>
-        <div className="consttyle col-3">
+        <div className="col-3">
             <p>Connect with us</p>
-            <p>Icons</p>
+            <p className="icons">
+            <a href="https://facebook.com">
+              <img src={fb}/>
+            </a>
+            <a href="https://twitter.com">
+              <img src={tw}/>
+            </a>
+            <a href="https://instagram.com">
+              <img src={ig}/>
+            </a>
+            <a href="https://gmail.com">
+              <img src={mail}/>
+            </a>
+            <a href="https://twitch.com">
+              <img src={twitch}/>
+            </a>
+            </p>
         </div>
-        <div className="consttyle col-3">
+        <div className="col-3">
             <p>Copyright Binar 2022</p>
             <p>another icon</p>
         </div>

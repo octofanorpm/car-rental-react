@@ -1,5 +1,6 @@
 import "./style.css"
 import imgCar from "./img_car.png"
+import {Link} from "react-router-dom"
 const Header = () => {
   return (
 <>
@@ -12,9 +13,9 @@ const Header = () => {
           untuk sewa mobil selama 24 jam.
         </p>
         <h3>
-          <a name="Start" id="" className="btn btn-primary" href="#" role="button">
+        <Link to='/search' name="Start" id="" className="btn btn-primary" href="#" role="button">
             Mulai Sewa Mobil
-          </a>
+          </Link>
         </h3>
       </div>
 

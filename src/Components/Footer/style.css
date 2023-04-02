@@ -1,6 +1,7 @@
 .footstyle{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin-top: 150px;
     margin-left: 136px;
 }
@@ -8,5 +9,14 @@
 .consttyle{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-right: 16px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
 }

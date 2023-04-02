@@ -120,16 +120,16 @@ const FormInput = () => {
             // justifyContent: "space-between",
             alignItems: "center",
           }}
-          className="row d-flex"
+          className="stycard"
         >
           {listCars.map(({id, image, name, price }) => {
             return (
               
               <div class="card col-2">
-                <div style={{ width: "270px", height: "auto" }}>
+                <div style={{ width: "auto", height: "auto" }}>
                   <img
                     class="card-img-top"
-                    width="100%"
+                    width="auto"
                     height="auto"
                     src={image}
                     alt=""

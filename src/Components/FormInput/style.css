@@ -11,8 +11,13 @@
         position: relative;
         z-index: 1;
         gap: 10px;
-        
-        
+}
+
+.stycard{
+    display: flex;
+    flex-direction: row;
+    margin-left: 136px;
+    margin-left: 136px;
 }
 
 .styfill{
