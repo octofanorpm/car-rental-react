@@ -4,7 +4,8 @@ import Select from "../Select";
 import { catOptions, hargaOptions, statusOptions } from "./../../Constants";
 import "./style.css";
 
-const apiCarURL = "https://run.mocky.io/v3/1ebcace0-5bb9-4b8d-a89c-5993b9647194"; //api untuk search mobil dari BE data server
+// const apiCarURL = "https://run.mocky.io/v3/1ebcace0-5bb9-4b8d-a89c-5993b9647194"; //api custom karena yang untuk challenge datanya kosong
+const apiCarURL = "https://bootcamp-rent-cars.herokuapp.com/customer/v2/car"; //api untuk search mobil dari BE data server
 
 const FormInput = () => {
   const [valueCategory, setCategory] = useState("");
@@ -22,16 +23,16 @@ const FormInput = () => {
     // setLoading(true);
     fetch(
       apiCarURL
-      //  +
-      //   "?" +
-      //   new URLSearchParams({
-      //     name: valueNamaMobil,
-      //     category: valueCategory,
-      //     isRented: valueStatus,
-      //     minPrice: valueHarga,
-      //     page: 1,
-      //     pageSize: 10,
-      //   })
+       +
+        "?" +
+        new URLSearchParams({
+          name: valueNamaMobil,
+          category: valueCategory,
+          isRented: valueStatus,
+          minPrice: valueHarga,
+          page: 1,
+          pageSize: 10,
+        })
     )
       .then((res) => res.json())
       .then((resp) => {
