@@ -1,0 +1,9 @@
+.styCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 24px;
+    margin-left: 136px;
+    margin-right: 136px;
+    
+}

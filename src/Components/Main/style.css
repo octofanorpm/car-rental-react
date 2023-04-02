@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    padding-top: 24px;
+    padding-left: 136px;
+    /* background-color: #f1f3ff; */
+    justify-content: space-between;
+}
+
+.center {
+    padding: 70px 0;
+  }
+
+.right{
+    padding: 0 70px;
+}  

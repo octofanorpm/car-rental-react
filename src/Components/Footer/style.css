@@ -1,0 +1,12 @@
+.footstyle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+    margin-left: 136px;
+}
+
+.consttyle{
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+}

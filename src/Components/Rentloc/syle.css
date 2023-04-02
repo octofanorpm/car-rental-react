@@ -1,0 +1,13 @@
+.containerloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1168px;
+    height: 326px;
+    background-color: #0D28A6;
+    justify-content: center;
+    margin-left: 136px;
+    margin-right: 136px;
+    margin-top: 24px;
+    color: white ;
+}

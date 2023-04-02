@@ -1,0 +1,20 @@
+.constyle{
+    display: flex;
+    flex-direction: row;
+    padding: 136px 136px 0;
+}
+
+.btnstyle{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 16px;
+    border-color: #D4D4D4;
+    background-color: #D4D4D400;
+    color: black;
+    
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,17 @@
+.heads {
+    display: flex;
+    flex-direction: row;
+    padding-left: 136px;
+    background-color: #f1f3ff;
+    justify-content: space-between;
+}
+
+.center {
+    padding: 70px 0;
+  }
+
+.responsive {
+    display: flex;
+    justify-content: end;
+    max-width: 100%;
+}

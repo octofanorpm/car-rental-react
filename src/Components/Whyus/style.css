@@ -1,0 +1,7 @@
+.why{
+    display: flex;
+    flex-direction: column;
+    padding-left: 136px;
+    padding-top: 24px;
+    justify-content: end;
+}

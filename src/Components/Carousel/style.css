@@ -1,0 +1,21 @@
+.carstyle{
+    display: flex;
+    justify-content: center;
+}
+
+.btncar{
+    height: 30px;
+    width: 30px;
+    background:none;
+    padding: 0%;
+    border-radius: 50%;
+    font-size: 20px;
+    position: relative;
+    border: 1px solid #C4C4C4;
+}
+
+.iconstyle{
+    font-size: 33px;
+    position: absolute;
+    top: -14px;
+}
