@@ -3,7 +3,9 @@ import tw from "./icon_twitter.png"
 import ig from "./icon_instagram.png"
 import mail from "./icon_mail.png"
 import twitch from "./icon_twitch.png"
+import logo from "./logo.png"
 import "./style.css";
+import {Link} from "react-router-dom"
 const Footer = () => {
   return (
     <>
@@ -47,7 +49,9 @@ const Footer = () => {
         </div>
         <div className="col-3">
             <p>Copyright Binar 2022</p>
-            <p>another icon</p>
+            <p><Link to='/'>
+              <img src={logo}/>
+            </Link></p>
         </div>
       </footer>
     </>
