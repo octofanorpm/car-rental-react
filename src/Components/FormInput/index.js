@@ -97,8 +97,8 @@ const FormInput = () => {
             Cari Mobil
           </button>
       </div>
-      <br />
-      <hr />
+      {/* <br />
+      <hr /> */}
       
       {/* <div>
         <h3>Result</h3>
@@ -110,8 +110,8 @@ const FormInput = () => {
           </div>
       </div> */}
 
-      <div className="">
-        <h3>Result</h3>
+      <div>
+        <h3 className="result">Result</h3>
 
         <div
           style={{
