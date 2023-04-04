@@ -2,6 +2,7 @@ import { useState } from "react";
 import TextField from "../TextField";
 import Select from "../Select";
 import { catOptions, hargaOptions, statusOptions } from "./../../Constants";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 // const apiCarURL = "https://run.mocky.io/v3/1ebcace0-5bb9-4b8d-a89c-5993b9647194"; //api custom karena yang untuk challenge datanya kosong
@@ -22,8 +23,7 @@ const FormInput = () => {
   const handleOnClick = () => {
     // setLoading(true);
     fetch(
-      apiCarURL
-       +
+      apiCarURL +
         "?" +
         new URLSearchParams({
           name: valueNamaMobil,
@@ -37,8 +37,8 @@ const FormInput = () => {
       .then((res) => res.json())
       .then((resp) => {
         const dataCar = resp.cars;
-        console.log (dataCar)
-        setListCars(dataCar)
+        console.log(dataCar);
+        setListCars(dataCar);
         // setListCars(dataCar);
         // setLoading(false);
       });
@@ -78,28 +78,28 @@ const FormInput = () => {
         </div>
 
         <div className="styfill">
-        <Select
-          labelValue={"Status"}
-          items={statusOptions}
-          onChange={setStatus}
-          value={valueStatus}
-          className="styfill"
-          // placeholder={statusOptions[0].text}
-        />
+          <Select
+            labelValue={"Status"}
+            items={statusOptions}
+            onChange={setStatus}
+            value={valueStatus}
+            className="styfill"
+            // placeholder={statusOptions[0].text}
+          />
         </div>
 
-        <button 
-            onClick={handleOnClick}
-            type="button"
-            // className="btn btnstyle"
-            className="btn btn-primary btn-lg btn-block"
-          >
-            Cari Mobil
-          </button>
+        <button
+          onClick={handleOnClick}
+          type="button"
+          // className="btn btnstyle"
+          className="btn btn-primary btn-lg btn-block"
+        >
+          Cari Mobil
+        </button>
       </div>
       {/* <br />
       <hr /> */}
-      
+
       {/* <div>
         <h3>Result</h3>
           <div>
@@ -122,9 +122,8 @@ const FormInput = () => {
           }}
           className="stycard"
         >
-          {listCars.map(({id, image, name, price }) => {
+          {listCars.map(({ id, image, name, price }) => {
             return (
-              
               <div class="card col-2">
                 <div style={{ width: "auto", height: "auto" }}>
                   <img
@@ -140,10 +139,18 @@ const FormInput = () => {
                   <p class="card-text">{price}</p>
                 </div>
 
-                  <button className="btn btn-success">Pilih Mobil</button>
-
+                {/* <button className="btn btn-success">Pilih Mobil</button> */}
+                <Link
+                  to="/search/detail"
+                  name="Start"
+                  id=""
+                  className="btn btn-success"
+                  href="#"
+                  role="button"
+                >
+                  Pilih Mobil
+                </Link>
               </div>
-              
             );
           })}
         </div>
