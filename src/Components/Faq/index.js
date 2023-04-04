@@ -66,7 +66,7 @@ const Faq = () => {
                 aria-expanded="false"
                 aria-controls="flush-collapseTwo"
               >
-                Apa saja syarat yang dibutuhkan?
+                Berapa hari minimal sewa mobil lepas kunci?
               </button>
             </h2>
             <div
@@ -113,22 +113,22 @@ const Faq = () => {
             </div>
           </div>
           <div class="accordion-item border border-1">
-            <h2 class="accordion-header" id="flush-headingThree">
+            <h2 class="accordion-header" id="flush-headingFour">
               <button
                 class="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree"
+                data-bs-target="#flush-collapseFour"
                 aria-expanded="false"
-                aria-controls="flush-collapseThree"
+                aria-controls="flush-collapseFour"
               >
                 Apakah Ada biaya antar-jemput?
               </button>
             </h2>
             <div
-              id="flush-collapseThree"
+              id="flush-collapseFour"
               class="accordion-collapse collapse"
-              aria-labelledby="flush-headingThree"
+              aria-labelledby="flush-headingFour"
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
@@ -142,22 +142,22 @@ const Faq = () => {
             </div>
           </div>
           <div class="accordion-item border border-1">
-            <h2 class="accordion-header" id="flush-headingThree">
+            <h2 class="accordion-header" id="flush-headingFive">
               <button
                 class="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree"
+                data-bs-target="#flush-collapseFive"
                 aria-expanded="false"
-                aria-controls="flush-collapseThree"
+                aria-controls="flush-collapseFive"
               >
                 Bagaimana jika terjadi kecelakaan
               </button>
             </h2>
             <div
-              id="flush-collapseThree"
+              id="flush-collapseFive"
               class="accordion-collapse collapse"
-              aria-labelledby="flush-headingThree"
+              aria-labelledby="flush-headingFive"
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">

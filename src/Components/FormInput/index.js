@@ -1,9 +1,11 @@
 import { useState } from "react";
+import {useHistory, useParams} from "react-router-dom"
 import TextField from "../TextField";
 import Select from "../Select";
 import { catOptions, hargaOptions, statusOptions } from "./../../Constants";
 import { Link } from "react-router-dom";
 import "./style.css";
+import { Button, Spinner } from "reactstrap";
 
 // const apiCarURL = "https://run.mocky.io/v3/1ebcace0-5bb9-4b8d-a89c-5993b9647194"; //api custom karena yang untuk challenge datanya kosong
 const apiCarURL = "https://bootcamp-rent-cars.herokuapp.com/customer/v2/car"; //api untuk search mobil dari BE data server
@@ -13,15 +15,14 @@ const FormInput = () => {
   const [valueHarga, setHarga] = useState("");
   const [valueStatus, setStatus] = useState("");
   const [valueNamaMobil, setNamaMobil] = useState("");
-  const [displayResult, setDisplayResult] = useState(false);
   const [listCars, setListCars] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const {push} = useHistory()
 
-  // const handleOnClick = () => {
-  //   // setDisplayResult(true);
-  // };
+  console.log({ listCars });
 
   const handleOnClick = () => {
-    // setLoading(true);
+    setLoading(true);
     fetch(
       apiCarURL +
         "?" +
@@ -37,12 +38,16 @@ const FormInput = () => {
       .then((res) => res.json())
       .then((resp) => {
         const dataCar = resp.cars;
-        console.log(dataCar);
-        setListCars(dataCar);
+        // console.log(dataCar);
         // setListCars(dataCar);
-        // setLoading(false);
+        setListCars(dataCar);
+        setLoading(false);
       });
   };
+
+  const handlePilihMobil = (param) => {
+    push(`/cari-mobil/${param}`)
+  }
 
   return (
     <>
@@ -62,7 +67,6 @@ const FormInput = () => {
             onChange={setCategory}
             value={valueCategory}
             className="styfill"
-            // placeholder={catOptions[0].text}
           />
         </div>
 
@@ -73,7 +77,6 @@ const FormInput = () => {
             onChange={setHarga}
             value={valueHarga}
             className="styfill"
-            // placeholder={hargaOptions[0].text}
           />
         </div>
 
@@ -84,31 +87,27 @@ const FormInput = () => {
             onChange={setStatus}
             value={valueStatus}
             className="styfill"
-            // placeholder={statusOptions[0].text}
           />
         </div>
 
-        <button
+        <Button
           onClick={handleOnClick}
           type="button"
-          // className="btn btnstyle"
           className="btn btn-primary btn-lg btn-block"
         >
-          Cari Mobil
-        </button>
+         {loading ? (
+          <>
+            <Spinner size="sm">Loading...</Spinner>
+            <span> Loading</span>
+          </>
+        ) : (
+          <>Cari Mobil</>
+        )}
+        </Button>
       </div>
+      
       {/* <br />
       <hr /> */}
-
-      {/* <div>
-        <h3>Result</h3>
-          <div>
-            <p>Nama Mobil: {valueNamaMobil}</p>
-            <p>Kategori Mobil: {valueCategory}</p>
-            <p>Harga Mobil: {valueHarga}</p>
-            <p>Status Mobil: {valueStatus}</p>
-          </div>
-      </div> */}
 
       <div>
         <h3 className="result">Result</h3>
@@ -140,7 +139,7 @@ const FormInput = () => {
                 </div>
 
                 {/* <button className="btn btn-success">Pilih Mobil</button> */}
-                <Link
+                {/* <Link
                   to="/search/detail"
                   name="Start"
                   id=""
@@ -149,7 +148,8 @@ const FormInput = () => {
                   role="button"
                 >
                   Pilih Mobil
-                </Link>
+                </Link> */}
+                <Button onClick={()=>handlePilihMobil(id)} style={{margin: '1em', backgroundColor: "#5CB85F", border: 'none', borderRadius: "2px"}}>Pilih Mobil</Button>
               </div>
             );
           })}

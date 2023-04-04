@@ -2,7 +2,8 @@ import Navbar from "../../Navbar"
 import Footer from "../../Footer"
 import Header from "../../Header"
 import FormInput from "../../FormInput"
-import DetailPage from "../../DetailPage"
+// import DetailPage from "../../DetailPage"
+import TestPage from "../../Pages/TestPage"
 
 const DetailCar = () => {
     return (
@@ -10,7 +11,7 @@ const DetailCar = () => {
         <Navbar/>
         <Header/>
         <FormInput/>
-        <DetailPage/>
+        <TestPage/>
         <Footer/>
     </div>
     )
